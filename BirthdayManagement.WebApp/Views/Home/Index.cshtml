@@ -1,0 +1,56 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<style>
+    .container .navbar-nav li:first-child,
+    .container .navbar-nav li:nth-child(2),
+    .container .navbar-nav li:nth-child(3) {
+        display: none;
+    }
+
+    .container .navbar-nav li:last-child {
+        margin-left: 50%;
+    }
+
+    .container main .text-center .initial-actions 
+    {
+        width: 100%;
+    }
+
+    .container main .text-center .initial-actions .action-container 
+    {
+        margin: 0 auto;
+        width: 50%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 10%;
+    }
+
+    .container main .text-center .initial-actions .action-container .add-people,
+    .container main .text-center .initial-actions .action-container .list-people 
+    {
+        width: 25%;
+    }
+</style>
+
+<div class="text-center">
+    <h2 class="display-4 text-danger" style="margin-bottom: 50px; font-weight: 600;">Selecione uma das opções abaixo</h2>
+    
+    <div class="initial-actions">
+        <div class="action-container">
+            <div class="add-people">
+                <a href="/persons/register" class="">
+                    <img src="~/images/user-plus-solid.svg" alt="Cadastrar" title="Cadastrar" />
+                </a>
+            </div>
+
+            <div class="list-people">
+                <a href="/persons/list" class="">
+                    <img src="~/images/list-alt-regular.svg" alt="Listar" title="Listar" />
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

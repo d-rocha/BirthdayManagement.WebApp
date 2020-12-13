@@ -1,0 +1,55 @@
+﻿@model Person
+@{
+    var person = Model;
+}
+
+<h1>Página de detalhe 📄</h1>
+<br />
+
+<div class="card mb-3" style="max-width: 540px;">
+    <div class="row no-gutters">
+        <div class="col-md-4">
+            <img class="card-img"
+                 alt="profile"
+                 src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI
+                    /Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnL
+                    UluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJ
+                    DYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6L
+                    y93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNTEyIDU
+                    xMiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTEyIDUxMjsiIHhtbDpzcGFjZT0icHJlc
+                    2VydmUiPg0KPHBhdGggc3R5bGU9ImZpbGw6IzQ1NUE2NDsiIGQ9Ik01MTEuNjc2LDQ5OC43NTJsLTEyLjg
+                    tNTEuMmMtNi4wNzMtMjQuODM4LTI0LjQ4NS00NC44MTMtNDguNzQ3LTUyLjg4NWwtOTMuODY3LTMxLjI3N
+                    Q0KCWMtMjIuODkxLTkuNTM2LTMzLjM2NS00Ni40LTM1LjYyNy02MC4zOTVjMTcuNDQyLTE0LjUwNCwyOC4
+                    2NjUtMzUuMTQsMzEuMzYtNTcuNjY0Yy0wLjM4NS0zLjg0NywwLjUyMy03LjcxMywyLjU4MS0xMC45ODcNC
+                    gljMy4zMjYtMC44MzMsNi4wNDktMy4yMTUsNy4zMTctNi40YzYuMTQyLTE0Ljg3Miw5Ljk5Ny0zMC41ODg
+                    sMTEuNDM1LTQ2LjYxM2MwLjAwMy0wLjg3MS0wLjEwNC0xLjczOC0wLjMyLTIuNTgxDQoJYy0xLjUyOC02L
+                    jIyNy01LjE4OS0xMS43MjItMTAuMzQ3LTE1LjUzMXYtNTYuNTU1YzAtMzQuMzY4LTEwLjQ5Ni00OC40Njk
+                    tMjEuNTQ3LTU2LjY0QzMzOS4wMDQsMzMuNDcyLDMyMS4yNzYsMCwyNTUuOTk2LDANCgljLTU3LjkxNywyL
+                    jMzMi0xMDQuMzM1LDQ4Ljc1LTEwNi42NjcsMTA2LjY2N3Y1Ni41NTVjLTUuMTU4LDMuODA5LTguODE5LDk
+                    uMzA0LTEwLjM0NywxNS41MzFjLTAuMjE2LDAuODQzLTAuMzIzLDEuNzExLTAuMzIsMi41ODENCgljMS40M
+                    zYsMTYuMDMzLDUuMjkxLDMxLjc1NiwxMS40MzUsNDYuNjM1YzAuOTI0LDMuMDE1LDMuMzQ3LDUuMzM0LDY
+                    uNCw2LjEyM2MxLjE5NSwwLjU5NywzLjQzNSwzLjY5MSwzLjQzNSwxMS4yNDMNCgljMi43MTEsMjIuNTg4L
+                    DEzLjk5OSw0My4yNzEsMzEuNTMxLDU3Ljc3MWMtMi4yNCwxMy45NzMtMTIuNjUxLDUwLjgxNi0zNC45MDE
+                    sNjAuMTE3bC05NC42OTksMzEuNDQ1DQoJYy0yNC4yNDMsOC4wNzEtNDIuNjQzLDI4LjAyNi00OC43MjUsN
+                    TIuODQzbC0xMi44LDUxLjJjLTEuNDQ5LDUuNzEsMi4wMDUsMTEuNTE0LDcuNzE1LDEyLjk2M2MwLjg1Myw
+                    wLjIxNywxLjczLDAuMzI3LDIuNjEsMC4zMjgNCgloNDkwLjY2N2M1Ljg5MS0wLjAwMiwxMC42NjUtNC43N
+                    zksMTAuNjY0LTEwLjY3QzUxMS45OTMsNTAwLjQ2MSw1MTEuODg2LDQ5OS41OTUsNTExLjY3Niw0OTguNzU
+                    yeiIvPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NC
+                    jxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjw
+                    vZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPC9zdmc+DQo=" />
+        </div>
+        <div class="col-md-8">
+            <div class="card-body">
+                <p style="display: none;">ID: @person.Id</p>
+                <h5 class="card-title">Nome: <span class="text-danger">@person.Name</span></h5>
+                <h5 class="card-title ">Sobrenome: <span class="text-danger">@person.LastName</span></h5>
+                <h5 class="card-title ">Data de Aniversário: <span class="text-danger">@person.Dob</span></h5>
+            </div>
+        </div>
+    </div>
+</div>
+<br />
+
+<button action="" class="btn btn-danger">
+    <a href="/persons/list" class="routes" style="color: #fff; text-decoration: none;">Voltar</a>
+</button>

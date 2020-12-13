@@ -1,0 +1,55 @@
+﻿<h1>Cadastrar nova pessoa ✍️</h1>
+<br />
+
+<form action="/persons/register" method="POST" style="width: 50%;" name="register" id="register">
+    <div class="form-group">
+        <label for="name">Nome</label>
+        <input type="text" class="form-control" id="name" name="name">
+    </div>
+
+    <div class="form-group">
+        <label for="lastname">Sobrenome</label>
+        <input type="text" class="form-control" id="lastname" name="lastname">
+    </div>
+
+    <div class="form-group">
+        <label for="dob">Data de Nascimento</label>
+        <input type="date" class="form-control" id="dob" name="dob">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Cadastrar</button>
+
+    <button action="" class="btn btn-danger">
+        <a href="/persons/list" class="routes" style="color: #fff; text-decoration: none;">Voltar</a>
+    </button>
+</form>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+<script type="text/javascript">
+    document.querySelector('#register').addEventListener('submit', function (e) {
+        var form = this;
+
+        e.preventDefault();
+
+        let name = document.register.name.value == "" || document.register.name.value.length < 3;
+        let lastname = document.register.lastname.value == "" || document.register.lastname.value.length < 3;
+        let dob = document.register.dob.value == "";
+
+        if (name || lastname || dob) {
+            swal({
+                icon: "error",
+                text: "Preencha todos os campos!",
+            });
+            return false;
+
+        } else {
+            swal({
+                icon: "success",
+                text: "Pessoa cadastrada com sucesso"
+            }).then(function () {
+                form.submit();
+            });            
+        }
+    });
+</script>

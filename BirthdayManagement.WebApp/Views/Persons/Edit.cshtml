@@ -1,0 +1,31 @@
+﻿@model Person
+@{ 
+    var person = Model;
+}
+
+<h1>Editar cadastro ✍️</h1>
+<br/>
+
+<form style="width: 50%;" action="/persons/edit" method="POST" id="edit">
+    <div class="form-group">
+        <label>Nome</label>
+        <input type="hidden" name="id" value="@person.Id">
+        <input type="text" class="form-control" id="name" name="name" value="@person.Name" required>
+    </div>
+
+    <div class="form-group">
+        <label>Sobrenome</label>
+        <input type="text" class="form-control" id="lastname" name="lastname" value="@person.LastName" required>
+    </div>
+
+    <div class="form-group">
+        <label>Data de Nascimento</label>
+        <input type="datetime" class="form-control" id="dob" name="dob" value="@person.Dob" required>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Editar</button>
+    
+    <button action="" class="btn btn-danger">
+        <a href="/persons/list" class="routes" style="color: #fff; text-decoration: none;">Cancelar</a>
+    </button>
+</form>

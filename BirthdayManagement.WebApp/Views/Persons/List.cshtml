@@ -1,0 +1,120 @@
+﻿@model List<Person>
+@{
+    var persons = Model;
+}
+
+<style>
+    .container main .persons-birthday-container,
+    .container main .people-list-container {
+        height: 200px;
+        max-height: 300px;
+        overflow: scroll;
+        overflow-x: hidden;
+        margin-bottom: 50px;
+    }
+</style>
+
+<h2>Aniversariantes do dia 🍰🍻</h2>
+<br />
+
+<div class="persons-birthday-container">
+    <table class="table persons-birthday people-list">
+        <thead style="background-color: #c82333; color: #fff;">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Sobrenome</th>
+                <th scope="col">Data de Nascimento</th>
+                <th scope="col">Opções</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var person in persons)
+            {
+                @if (person.Dob.Day == DateTime.Today.Day && person.Dob.Month == DateTime.Today.Month)
+                {
+                    <tr>
+                        <th scope="row">
+                            @persons.IndexOf(person)
+                        </th>
+                        <td>
+                            @person.Name
+                        </td>
+                        <td>
+                            @person.LastName
+                        </td>
+                        <td>
+                            @person.Dob
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-success">
+                                <a href="/persons/detail?id=@person.Id" class="routes" style="color: #fff; text-decoration: none;">Detalhes</a>
+                            </button>
+                            <button type="button" class="btn btn-warning">
+                                <a href="/persons/edit?id=@person.Id" class="broutes" style="color: #fff; text-decoration: none;">Editar</a>
+                            </button>
+                            <button type="button" class="btn btn-danger">
+                                <a href="/persons/delete?id=@person.Id" class="routes" style="color: #fff; text-decoration: none;">Deletar</a>
+                            </button>
+                        </td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+</div>
+
+<h3>Demais pessoas cadastradas 🧾</h3>
+<br />
+
+<div class="people-list-container">
+    <table class="table people-list">
+        <thead style="background-color: #c82333; color: #fff;">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Sobrenome</th>
+                <th scope="col">Data de Nascimento</th>
+                <th scope="col">Opções</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var person in persons)
+            {
+                if (person.Dob.Day != DateTime.Today.Day && person.Dob.Month != DateTime.Today.Month)
+                {
+                    <tr>
+                        <th scope="row">
+                            @persons.IndexOf(person)
+                        </th>
+                        <td>
+                            @person.Name
+                        </td>
+                        <td>
+                            @person.LastName
+                        </td>
+                        <td>
+                            @person.Dob
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-success">
+                                <a href="/persons/detail?id=@person.Id" class="routes" style="color: #fff; text-decoration: none;">Detalhes</a>
+                            </button>
+                            <button type="button" class="btn btn-warning">
+                                <a href="/persons/edit?id=@person.Id" class="broutes" style="color: #fff; text-decoration: none;">Editar</a>
+                            </button>
+                            <button type="button" class="btn btn-danger">
+                                <a href="/persons/delete?id=@person.Id" class="routes" style="color: #fff; text-decoration: none;">Deletar</a>
+                            </button>
+                        </td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+</div>
+
+<script type="text/javascript">
+
+
+</script>

@@ -1,0 +1,98 @@
+﻿<style>
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    p,
+    a {
+        color: #e0e2f4;
+    }
+
+    body,
+    p {
+        font: normal 20px/1.25rem "VT323", monospace;
+    }
+
+    h1 {
+        font: normal 2.75rem/1.05em "VT323", monospace;
+    }
+
+    h2 {
+        font: normal 2.25rem/1.25em "VT323", monospace;
+    }
+
+    h3 {
+        font: lighter 1.5rem/1.25em "VT323", monospace;
+    }
+
+    h4 {
+        font: lighter 1.125rem/1.2222222em "VT323", monospace;
+    }
+
+    body {
+        background: #0414a7;
+    }
+
+    .container {
+        width: 100vw;
+        margin: auto;
+    }
+
+    .container-404 {
+        padding-top: 15%;
+    }
+
+    .container-404 .neg {
+        text-align: center;
+        color: #0414a7;
+    }
+
+    .container-404 .neg .bg {
+        background: #aaaaaa;
+        padding: 0 15px 2px 13px;
+    }
+
+    .container-404 .title {
+        margin-bottom: 50px;
+    }
+
+    .container-404 p {
+        line-height: 2rem;
+        margin: 0 23%;
+    }
+
+    .container-404 .nav {
+        margin-top: 35px;
+        text-align: center;
+        display: block;
+    }
+
+    .container-404 .nav .link {
+        text-decoration: none;
+        padding: 0 9px 2px 8px;
+    }
+
+    .container-404 .nav .link:hover, .container-404 .nav .link:focus {
+        background: #aaaaaa;
+        color: #0414a7;
+    }
+
+    header, footer {
+        display: none;
+    }
+</style>
+
+<div class="container-404">
+    <h1 class="neg title"><span class="bg">Error - 404</span></h1>
+    <p>Não existem pessoas cadastradas, para continuar:</p>
+    <p>
+        * Retorne a home.<br />
+        * Ou clique no link de cadastrar abaixo.
+    </p>
+    <div class="nav">
+        <a href="/home/index" class="link">HOME</a>
+        &nbsp;|&nbsp;
+        <a href="/persons/register" class="link">CADASTRAR</a>
+    </div>
+</div>
